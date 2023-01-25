@@ -1,0 +1,60 @@
+https://habr.com/ru/post/453416/
+
+ConsoleApp1
+-------------
+.AddJsonFile("appsettings.json")
+how to use and read
+
+.AddJsonFile($"appsettings2.json", optional: true)
+
+.AddXmlFile("XMLsettings.xml")
+
+.AddEnvironmentVariables()
+set WebCredentials:Password=PassFromEnvironment
+
+Launch profiles
+add variable here
+
+.AddCommandLine(args)
+WebCredentials:Password=value1
+--WebCredentials:Password=value2
+/WebCredentials:Password=value3
+--WebCredentials:Password value4
+/WebCredentials:Password value5
+
+
+.AddUserSecrets<Program>()
+Manage User secrets
+Where are they
+UserSecretsId in csproj
+
+IConfigurationSource
+See sources in debug
+
+.Add(new HardcodedConfigurationSource())
+
+
+
+ConsoleApp2
+-------------
+temporary configuration
+
+
+ConsoleApp3
+--------------
+Use Host.CreateDefaultBuilder(args)
+See sources in debug
+
+
+WebApplication1
+-----------------
+See sources in Program.cs
+see appsettings.Development.json
+launchSettings.json
+Add env variable to launchSettings.json: WebCredentials:Password
+
+IOptions: registering, using
+
+
+Edge.Web 
+------------------
